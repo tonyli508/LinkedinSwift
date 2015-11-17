@@ -10,9 +10,8 @@
 		10F97B261BFBA10500C420E4 /* LinkedinSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 10F97B251BFBA10500C420E4 /* LinkedinSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10F97B2D1BFBA10500C420E4 /* LinkedinSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F97B221BFBA10500C420E4 /* LinkedinSwift.framework */; };
 		10F97B321BFBA10500C420E4 /* LinkedinSwiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B311BFBA10500C420E4 /* LinkedinSwiftTests.m */; };
-		10F97B401BFBA19600C420E4 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F97B3F1BFBA19600C420E4 /* linkedin-sdk.framework */; };
-		10F97B451BFBA2B800C420E4 /* LinkedinSwiftHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 10F97B431BFBA2B800C420E4 /* LinkedinSwiftHelper.h */; };
-		10F97B461BFBA2B800C420E4 /* LinkedinSwiftHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B441BFBA2B800C420E4 /* LinkedinSwiftHelper.m */; };
+		10F97B4B1BFBA66D00C420E4 /* LinkedinSwiftHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */; };
+		10F97B4C1BFBA66D00C420E4 /* LinkedinSwiftHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,9 +31,8 @@
 		10F97B2C1BFBA10500C420E4 /* LinkedinSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkedinSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F97B311BFBA10500C420E4 /* LinkedinSwiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedinSwiftTests.m; sourceTree = "<group>"; };
 		10F97B331BFBA10500C420E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10F97B3F1BFBA19600C420E4 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "linkedin-sdk.framework"; path = "sources/linkedin-sdk.framework"; sourceTree = "<group>"; };
-		10F97B431BFBA2B800C420E4 /* LinkedinSwiftHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedinSwiftHelper.h; sourceTree = "<group>"; };
-		10F97B441BFBA2B800C420E4 /* LinkedinSwiftHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedinSwiftHelper.m; sourceTree = "<group>"; };
+		10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedinSwiftHelper.h; path = sources/LinkedinSwiftHelper.h; sourceTree = "<group>"; };
+		10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedinSwiftHelper.m; path = sources/LinkedinSwiftHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10F97B401BFBA19600C420E4 /* linkedin-sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,9 +94,8 @@
 		10F97B3E1BFBA17C00C420E4 /* sources */ = {
 			isa = PBXGroup;
 			children = (
-				10F97B3F1BFBA19600C420E4 /* linkedin-sdk.framework */,
-				10F97B431BFBA2B800C420E4 /* LinkedinSwiftHelper.h */,
-				10F97B441BFBA2B800C420E4 /* LinkedinSwiftHelper.m */,
+				10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */,
+				10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */,
 			);
 			name = sources;
 			sourceTree = "<group>";
@@ -111,7 +107,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10F97B451BFBA2B800C420E4 /* LinkedinSwiftHelper.h in Headers */,
+				10F97B4B1BFBA66D00C420E4 /* LinkedinSwiftHelper.h in Headers */,
 				10F97B261BFBA10500C420E4 /* LinkedinSwift.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10F97B461BFBA2B800C420E4 /* LinkedinSwiftHelper.m in Sources */,
+				10F97B4C1BFBA66D00C420E4 /* LinkedinSwiftHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
