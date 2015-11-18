@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LinkedinSwift"
-  s.version      = "0.7"
+  s.version      = "0.8"
   s.summary      = "Linkedin iOS SDK, using for Swift with iOS 7"
 
   s.homepage     = "https://github.com/tonyli508/LinkedinSwift.git"
