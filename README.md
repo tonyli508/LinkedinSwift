@@ -22,6 +22,7 @@ Check out Example project.
 let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF45DIWOERCM", permissions: ["r_basicprofile", "r_emailaddress"]))
 ```
 2. Setup Linkedin SDK settings: [instruction here](https://developer.linkedin.com/docs/ios-sdk)
+
 3. Login:
 ```swift
 
@@ -35,7 +36,8 @@ let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfigurati
 ```
 4. Fetch profile:
 ```swift
-linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~?format=json", requestType: LinkedinSwiftRequestGet, success: { (response) -> Void in
+
+		linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~?format=json", requestType: LinkedinSwiftRequestGet, success: { (response) -> Void in
             
             //Request success response
             
@@ -44,6 +46,10 @@ linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~?format=json", re
             //Encounter error
         }
 ```
+
+Example project screenshots:
+
+![Demo photo](https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg)
 
 ## Known issues
 
