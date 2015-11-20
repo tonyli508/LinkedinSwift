@@ -7,12 +7,12 @@ LinkedinSwift is a project for managing native LinkedIn SDK using [Cocoapods](ht
 
 Linkedin Oauth Helper, depend on Linkedin Native App installed or not, using Linkdin IOS SDK or UIWebView to login, support Swift with iOS 7
 
-Latest version 0.9 is based on [LinkedIn SDK 1.0.6](https://content.linkedin.com/content/dam/developer/sdk/iOS/li-ios-sdk-1.0.6-release.zip) and [IOSLinkedinAPI for webview auth](https://github.com/jeyben/IOSLinkedInAPI).
+Latest version 1.1 is based on [LinkedIn SDK 1.0.6](https://content.linkedin.com/content/dam/developer/sdk/iOS/li-ios-sdk-1.0.6-release.zip) and [IOSLinkedinAPI for webview auth](https://github.com/jeyben/IOSLinkedInAPI).
 
 ## How to use
 
 ```ruby
-pod 'LinkedinSwift', '~> 0.8'
+pod 'LinkedinSwift', '~> 1.1'
 ```
 
 Check out Example project.
@@ -50,7 +50,7 @@ let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfigurati
 Example project screenshots:
 
 <p align="center">
-<img src="https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg" alt="Demo photo" style="width:56;height:100" />
+<img src="https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg" alt="Demo photo" width="56" height="100" />
 </p>
 
 ## Known issues
