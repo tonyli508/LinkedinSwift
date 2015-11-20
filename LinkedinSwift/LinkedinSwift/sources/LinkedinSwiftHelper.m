@@ -91,7 +91,7 @@
                 NSString *accessToken = [dictionary objectForKey:@"access_token"];
                 NSNumber *expiresInSec = [dictionary objectForKey:@"expires_in"];
                 
-                this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:accessToken expireDate:[NSDate dateWithTimeIntervalSince1970:expiresInSec.doubleValue]];
+                this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:accessToken expireDate:[NSDate dateWithTimeIntervalSinceNow:expiresInSec.doubleValue]];
                 successCallback(this->lsAccessToken);
             } failure:^(NSError *error) {
                 errorCallback(error);

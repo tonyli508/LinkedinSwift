@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/tonyli508/LinkedinSwift.git", :tag => "#{s.version}" }
   s.source_files        = 'LinkedinSwift/LinkedinSwift/sources/*.*'
   s.preserve_paths      = 'linkedin-sdk.framework'
-  s.public_header_files = "LinkedinSwift/LinkedinSwift/LinkedinSwift.h"
   s.vendored_frameworks = 'linkedin-sdk.framework'
   s.requires_arc = true
 
