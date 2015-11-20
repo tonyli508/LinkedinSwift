@@ -17,13 +17,13 @@ pod 'LinkedinSwift', '~> 0.8'
 
 Check out Example project.
 
-1. Setup configuration and helper instance.
+- Setup configuration and helper instance.
 ```swift
 let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF45DIWOERCM", permissions: ["r_basicprofile", "r_emailaddress"]))
 ```
-2. Setup Linkedin SDK settings: [instruction here](https://developer.linkedin.com/docs/ios-sdk)
+- Setup Linkedin SDK settings: [instruction here](https://developer.linkedin.com/docs/ios-sdk)
 
-3. Login:
+- Login:
 ```swift
 
 		linkedinHelper.authorizeSuccess({ (lsToken) -> Void in
@@ -34,7 +34,7 @@ let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfigurati
             //User Cancelled!
         })
 ```
-4. Fetch profile:
+- Fetch profile:
 ```swift
 
 		linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~?format=json", requestType: LinkedinSwiftRequestGet, success: { (response) -> Void in
