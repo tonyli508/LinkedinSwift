@@ -9,7 +9,7 @@
 #ifndef LSHeader_h
 #define LSHeader_h
 
-#import "LinkedInSwiftHelper.h"
+#import "LinkedinSwiftHelper.h"
 #import "LinkedinSwiftConfiguration.h"
 
 #endif /* LSHeader_h */

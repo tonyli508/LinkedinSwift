@@ -322,6 +322,7 @@
 				10905A921BFE8FF9002AA119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

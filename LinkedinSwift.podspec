@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LinkedinSwift"
-  s.version      = "1.1"
+  s.version      = "1.2"
   s.summary      = "Linkedin Oauth Helper, depend on Linkedin Native App installed or not, using Linkdin IOS SDK or UIWebView to login, support Swift with iOS 7"
 
   s.homepage     = "https://github.com/tonyli508/LinkedinSwift.git"
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/tonyli508/LinkedinSwift.git", :tag => "#{s.version}" }
   s.source_files        = 'LinkedinSwift/LinkedinSwift/sources/*.*'
   s.preserve_paths      = 'linkedin-sdk.framework'
-  s.public_header_files = 'LinkedinSwift/LinkedinSwift/sources/LSHeader.h, linkedin-sdk.framework/Versions/A/Headers/LISDK.h'
+  s.public_header_files = "LinkedinSwift/LinkedinSwift/LinkedinSwift.h"
   s.vendored_frameworks = 'linkedin-sdk.framework'
   s.requires_arc = true
 
