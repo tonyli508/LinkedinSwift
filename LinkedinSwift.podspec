@@ -12,10 +12,12 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
 
   s.source = { :git => "https://github.com/tonyli508/LinkedinSwift.git", :tag => "#{s.version}" }
-  s.source_files        = 'LinkedinSwift/LinkedinSwift/LinkedinSwift/sources/*.*'
+  s.source_files        = 'LinkedinSwift/LinkedinSwift/sources/*.*'
   s.preserve_paths      = 'linkedin-sdk.framework'
   s.public_header_files = 'linkedin-sdk.framework/Versions/A/Headers/LISDK.h'
   s.vendored_frameworks = 'linkedin-sdk.framework'
   s.requires_arc = true
+
+  s.dependency 'IOSLinkedInAPI', '>= 2.0.0'
 
 end

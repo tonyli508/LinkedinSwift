@@ -49,7 +49,7 @@ let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfigurati
 
 Example project screenshots:
 
-![Demo photo](https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg)
+->![Demo photo](https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg = 100x56)<-
 
 ## Known issues
 
