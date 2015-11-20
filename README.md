@@ -49,7 +49,9 @@ let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfigurati
 
 Example project screenshots:
 
--> ![Demo photo](https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg = 100x56) <-
+<p align="center">
+<img src="https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jp" alt="Demo photo" />
+</p>
 
 ## Known issues
 
