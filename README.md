@@ -50,7 +50,7 @@ let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfigurati
 Example project screenshots:
 
 <p align="center">
-<img src="https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jp" alt="Demo photo" />
+<img src="https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg" alt="Demo photo" />
 </p>
 
 ## Known issues
