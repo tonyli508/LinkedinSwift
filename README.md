@@ -12,7 +12,7 @@ Latest version 1.1 is based on [LinkedIn SDK 1.0.6](https://content.linkedin.com
 ## How to use
 
 ```ruby
-pod 'LinkedinSwift', '~> 1.1'
+pod 'LinkedinSwift', '~> 1.2'
 ```
 
 Check out Example project.
