@@ -66,8 +66,7 @@
                 successCallback(this->lsAccessToken);
                 
             } errorBlock:^(NSError *error) {
-                
-                // error code 3 means user cancelled
+                // error code 3 means user cancelled, LISDKErrorCode.USER_CANCELLED doesn't work
                 if (error.code == 3) {
                     cancelCallback();
                 } else {

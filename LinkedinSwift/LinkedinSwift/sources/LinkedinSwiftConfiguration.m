@@ -12,14 +12,14 @@
 @implementation LinkedinSwiftConfiguration
 @synthesize clientId, clientSecret, state, permissions, redirectUrl;
 
-- (instancetype)initWithClientId:(NSString *)_clientId clientSecret:(NSString *)_clientSecret state:(NSString *)_state permissions:(NSArray *)_permisssions {
+- (instancetype)initWithClientId:(NSString *)_clientId clientSecret:(NSString *)_clientSecret state:(NSString *)_state permissions:(NSArray *)_permisssions redirectUrl:(NSString *)_redirectUrl {
     
     if (self = [super init]) {
         clientId = _clientId;
         clientSecret = _clientSecret;
         state = _state;
         permissions = _permisssions;
-        redirectUrl = @"https://carmaridepool.com/linkedin-oauth";
+        redirectUrl = _redirectUrl;
     }
     
     return self;

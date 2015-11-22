@@ -42,10 +42,12 @@
  *  @param clientSecret Linkedin client secret
  *  @param state        state to identify each oauth redirect calls, make a unique one
  *  @param permisssions Linkedin permissions to ask
+ *  @param redirectUrl  Linkedin oauth redirect url
  *
  *  @return LinkedinSwiftConfiguration
  */
-- (instancetype)initWithClientId:(NSString*)clientId clientSecret:(NSString*)clientSecret state:(NSString*)state permissions:(NSArray*)permisssions;
+
+- (instancetype)initWithClientId:(NSString *)_clientId clientSecret:(NSString *)_clientSecret state:(NSString *)_state permissions:(NSArray *)_permisssions redirectUrl:(NSString *)redirectUrl;
 
 
 

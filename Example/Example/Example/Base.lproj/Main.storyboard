@@ -49,7 +49,7 @@
                                     <action selector="requestProfile" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xns-iU-3aP"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This is output console, wait for Login now." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIH-Ov-V1h">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="This is output console, wait for Login now." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HIH-Ov-V1h">
                                 <rect key="frame" x="0.0" y="90" width="600" height="400"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
