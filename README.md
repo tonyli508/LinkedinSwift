@@ -7,12 +7,12 @@ LinkedinSwift is a project for managing native LinkedIn SDK using [Cocoapods](ht
 
 Linkedin Oauth Helper, depend on Linkedin Native App installed or not, using Linkdin IOS SDK or UIWebView to login, support Swift with iOS 7
 
-Latest version 1.3 is based on [LinkedIn SDK 1.0.6](https://content.linkedin.com/content/dam/developer/sdk/iOS/li-ios-sdk-1.0.6-release.zip) and [IOSLinkedinAPI for webview auth](https://github.com/jeyben/IOSLinkedInAPI).
+Latest version 1.4 is based on [LinkedIn SDK 1.0.4](https://content.linkedin.com/content/dam/developer/sdk/iOS/li-ios-sdk-1.0.6-release.zip) and [IOSLinkedinAPI for webview auth](https://github.com/jeyben/IOSLinkedInAPI).
 
 ## How to use
 
 ```ruby
-pod 'LinkedinSwift', '~> 1.3'
+pod 'LinkedinSwift', '~> 1.4'
 ```
 
 Check out Example project.
@@ -55,5 +55,5 @@ Example project screenshots:
 
 ## Known issues
 
-It turns out 1.0.6 release note: `Added Bitcode support.` is a lie. So you need to turn off Bitcode to make it work.
+~~It turns out Linkedin 1.0.6 release note: `Added Bitcode support.` is a lie.~~ (They secretly remove 1.0.6) You need to turn off Bitcode to make it work.
 
