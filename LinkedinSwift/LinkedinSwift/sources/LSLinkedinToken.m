@@ -9,14 +9,15 @@
 #import "LSLinkedinToken.h"
 
 @implementation LSLinkedinToken
-@synthesize accessToken, expireDate;
+@synthesize accessToken, expireDate, isFromMobileSDK;
 
-- (instancetype)initWithAccessToken:(NSString*)_accessToken expireDate:(NSDate*)_expireDate {
+- (instancetype)initWithAccessToken:(NSString*)_accessToken expireDate:(NSDate*)_expireDate fromMobileSDK:(BOOL)_isFromMobileSDK {
     
     if (self = [super init]) {
         
         accessToken = _accessToken;
         expireDate = _expireDate;
+        isFromMobileSDK = _isFromMobileSDK;
     }
     
     return self;

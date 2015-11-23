@@ -21,8 +21,12 @@
  *  token expire date
  */
 @property (nonatomic, strong, readonly) NSDate *expireDate;
+/**
+ *  If token is from MobileSDK
+ */
+@property (nonatomic, readonly) BOOL isFromMobileSDK;
 
 
-- (instancetype)initWithAccessToken:(NSString*)accessToken expireDate:(NSDate*)expireDate;
+- (instancetype)initWithAccessToken:(NSString*)_accessToken expireDate:(NSDate*)_expireDate fromMobileSDK:(BOOL)_isFromMobileSDK;
 
 @end

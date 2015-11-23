@@ -53,7 +53,7 @@
         // check if session is still cached
         if (session && session.isValid) {
             
-            this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration];
+            this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration fromMobileSDK: YES];
             successCallback(this->lsAccessToken);
         } else {
             
@@ -62,7 +62,7 @@
                 
                 // refresh session
                 session = [[LISDKSessionManager sharedInstance] session];
-                this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration];
+                this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration fromMobileSDK: YES];
                 successCallback(this->lsAccessToken);
                 
             } errorBlock:^(NSError *error) {
@@ -90,7 +90,7 @@
                 NSString *accessToken = [dictionary objectForKey:@"access_token"];
                 NSNumber *expiresInSec = [dictionary objectForKey:@"expires_in"];
                 
-                this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:accessToken expireDate:[NSDate dateWithTimeIntervalSinceNow:expiresInSec.doubleValue]];
+                this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:accessToken expireDate:[NSDate dateWithTimeIntervalSinceNow:expiresInSec.doubleValue] fromMobileSDK: NO];
                 successCallback(this->lsAccessToken);
             } failure:^(NSError *error) {
                 errorCallback(error);
