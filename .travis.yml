@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: LinkedinSwift/LinkedinSwift.xcodeproj
+xcode_scheme: LinkedinSwiftTests
+xcode_sdk: iphonesimulator9.1
