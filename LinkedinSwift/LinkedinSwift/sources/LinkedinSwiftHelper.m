@@ -42,67 +42,73 @@
 
 - (void)authorizeSuccess:(LinkedinSwiftAuthRequestSuccessCallback)successCallback error:(LinkedinSwiftRequestErrorCallback)errorCallback cancel:(LinkedinSwiftRequestCancelCallback)cancelCallback {
     
-    __block LinkedinSwiftHelper *this = self;
-    if ([LinkedinSwiftHelper isLinkedinAppInstalled]) {
-        
-        /**
-         *  If Linkedin app installed, use Linkedin sdk
-         */
-        __block LISDKSession *session = [[LISDKSessionManager sharedInstance] session];
-        
-        // check if session is still cached
-        if (session && session.isValid) {
+    /**
+     *  If previous token still in memory callback directly
+     */
+    if (lsAccessToken != nil && [lsAccessToken.expireDate timeIntervalSinceNow] > 0) {
+        successCallback(lsAccessToken);
+    } else {
+        __block LinkedinSwiftHelper *this = self;
+        if ([LinkedinSwiftHelper isLinkedinAppInstalled]) {
             
-            this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration fromMobileSDK: YES];
-            successCallback(this->lsAccessToken);
-        } else {
+            /**
+             *  If Linkedin app installed, use Linkedin sdk
+             */
+            __block LISDKSession *session = [[LISDKSessionManager sharedInstance] session];
             
-            // no cache, create a new session
-            [LISDKSessionManager createSessionWithAuth:configuration.permissions state:@"GET-ACCESS-TOKEN" showGoToAppStoreDialog:YES successBlock:^(NSString *returnState) {
+            // check if session is still cached
+            if (session && session.isValid) {
                 
-                // refresh session
-                session = [[LISDKSessionManager sharedInstance] session];
                 this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration fromMobileSDK: YES];
                 successCallback(this->lsAccessToken);
+            } else {
                 
-            } errorBlock:^(NSError *error) {
-                // error code 3 means user cancelled, LISDKErrorCode.USER_CANCELLED doesn't work
-                if (error.code == 3) {
-                    cancelCallback();
-                } else {
-                    errorCallback(error);
-                }
-            }];
-        }
-    } else {
-        
-        /**
-         *  If Linkedin app is not installed, present a model webview to let use login
-         *
-         *  WARNING: here we can check the cache save api call as well,
-         *  but there is a problem when you login on other devices the accessToken you cached will invalid,
-         *  and only you use this will be notice this, so I choose don't use this cache
-         */
-        [httpClient getAuthorizationCode:^(NSString *code) {
+                // no cache, create a new session
+                [LISDKSessionManager createSessionWithAuth:configuration.permissions state:@"GET-ACCESS-TOKEN" showGoToAppStoreDialog:YES successBlock:^(NSString *returnState) {
+                    
+                    // refresh session
+                    session = [[LISDKSessionManager sharedInstance] session];
+                    this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration fromMobileSDK: YES];
+                    successCallback(this->lsAccessToken);
+                    
+                } errorBlock:^(NSError *error) {
+                    // error code 3 means user cancelled, LISDKErrorCode.USER_CANCELLED doesn't work
+                    if (error.code == 3) {
+                        cancelCallback();
+                    } else {
+                        errorCallback(error);
+                    }
+                }];
+            }
+        } else {
             
-            [this->httpClient getAccessToken:code success:^(NSDictionary *dictionary) {
+            /**
+             *  If Linkedin app is not installed, present a model webview to let use login
+             *
+             *  WARNING: here we can check the cache save api call as well,
+             *  but there is a problem when you login on other devices the accessToken you cached will invalid,
+             *  and only you use this will be notice this, so I choose don't use this cache
+             */
+            [httpClient getAuthorizationCode:^(NSString *code) {
                 
-                NSString *accessToken = [dictionary objectForKey:@"access_token"];
-                NSNumber *expiresInSec = [dictionary objectForKey:@"expires_in"];
+                [this->httpClient getAccessToken:code success:^(NSDictionary *dictionary) {
+                    
+                    NSString *accessToken = [dictionary objectForKey:@"access_token"];
+                    NSNumber *expiresInSec = [dictionary objectForKey:@"expires_in"];
+                    
+                    this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:accessToken expireDate:[NSDate dateWithTimeIntervalSinceNow:expiresInSec.doubleValue] fromMobileSDK: NO];
+                    successCallback(this->lsAccessToken);
+                } failure:^(NSError *error) {
+                    errorCallback(error);
+                }];
                 
-                this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:accessToken expireDate:[NSDate dateWithTimeIntervalSinceNow:expiresInSec.doubleValue] fromMobileSDK: NO];
-                successCallback(this->lsAccessToken);
+            } cancel:^{
+                cancelCallback();
             } failure:^(NSError *error) {
                 errorCallback(error);
             }];
-            
-        } cancel:^{
-            cancelCallback();
-        } failure:^(NSError *error) {
-            errorCallback(error);
-        }];
+        }
     }
-    
 }
 
 #pragma mark -
