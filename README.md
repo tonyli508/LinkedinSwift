@@ -22,7 +22,19 @@ Check out Example project.
 let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF45DIWOERCM", permissions: ["r_basicprofile", "r_emailaddress"]))
 ```
 - Setup Linkedin SDK settings: [instruction here](https://developer.linkedin.com/docs/ios-sdk)
+- Setup redirect handler in AppDelegate
+```swift
 
+	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+	
+        // Linkedin sdk handle redirect
+        if LinkedinSwiftHelper.shouldHandleUrl(url) {
+            return LinkedinSwiftHelper.application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+        }
+        
+        return false
+	}
+```
 - Login:
 ```swift
 
