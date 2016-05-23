@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
   s.vendored_frameworks = 'linkedin-sdk.framework'
   s.requires_arc = true
 
+  s.dependency 'AFNetworking', '= 2.6.3'
   s.dependency 'IOSLinkedInAPI', '>= 2.0.0'
 
 end
