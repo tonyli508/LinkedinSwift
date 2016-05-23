@@ -3,7 +3,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/LinkedinSwift.svg)](https://github.com/tonyli508/LinkedinSwift.git)
 
 
-LinkedinSwift is a project for managing native LinkedIn SDK using [Cocoapods](https://cocoapods.org)
+LinkedinSwift is a project for managing native LinkedIn SDK using [CocoaPods](https://cocoapods.org)
 
 Linkedin Oauth Helper, depend on Linkedin Native App installed or not, using Linkdin IOS SDK or UIWebView to login, support Swift with iOS 7
 
