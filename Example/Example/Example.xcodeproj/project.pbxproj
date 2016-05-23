@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102CE6241CF34FB800BF47BA /* LinkedinSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 102CE6231CF34FB800BF47BA /* LinkedinSwift.framework */; };
 		10905A821BFE8FF9002AA119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10905A811BFE8FF9002AA119 /* AppDelegate.swift */; };
 		10905A841BFE8FF9002AA119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10905A831BFE8FF9002AA119 /* ViewController.swift */; };
 		10905A871BFE8FF9002AA119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10905A851BFE8FF9002AA119 /* Main.storyboard */; };
 		10905A891BFE8FF9002AA119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10905A881BFE8FF9002AA119 /* Assets.xcassets */; };
 		10905A8C1BFE8FF9002AA119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10905A8A1BFE8FF9002AA119 /* LaunchScreen.storyboard */; };
-		10905AA81BFEAD38002AA119 /* LinkedinSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10905AA71BFEAD38002AA119 /* LinkedinSwift.framework */; };
-		10905AA91BFEAD38002AA119 /* LinkedinSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10905AA71BFEAD38002AA119 /* LinkedinSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				10905AA91BFEAD38002AA119 /* LinkedinSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -31,6 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		102CE6231CF34FB800BF47BA /* LinkedinSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LinkedinSwift.framework; sourceTree = "<group>"; };
 		10905A7E1BFE8FF9002AA119 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10905A811BFE8FF9002AA119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10905A831BFE8FF9002AA119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +38,6 @@
 		10905A8B1BFE8FF9002AA119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10905A8D1BFE8FF9002AA119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10905A951BFE91EB002AA119 /* ObjectiveCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCHeader.h; sourceTree = "<group>"; };
-		10905AA71BFEAD38002AA119 /* LinkedinSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = LinkedinSwift.framework; path = "/Users/lijiantang/Library/Developer/Xcode/DerivedData/LinkedinSwift-fcozmjzszkmsgpgnwibifmwwebhn/Build/Products/Debug-iphoneos/LinkedinSwift.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10905AA81BFEAD38002AA119 /* LinkedinSwift.framework in Frameworks */,
+				102CE6241CF34FB800BF47BA /* LinkedinSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +55,7 @@
 		10905A751BFE8FF9002AA119 = {
 			isa = PBXGroup;
 			children = (
-				10905AA71BFEAD38002AA119 /* LinkedinSwift.framework */,
+				102CE6231CF34FB800BF47BA /* LinkedinSwift.framework */,
 				10905A801BFE8FF9002AA119 /* Example */,
 				10905A7F1BFE8FF9002AA119 /* Products */,
 			);

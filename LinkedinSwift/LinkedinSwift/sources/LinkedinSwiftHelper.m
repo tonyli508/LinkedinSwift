@@ -9,8 +9,8 @@
 #import "LinkedinSwiftHelper.h"
 
 #import "LinkedinSwiftConfiguration.h"
-#import <IOSLinkedInAPI/LIALinkedInApplication.h>
-#import <IOSLinkedInAPI/LIALinkedInHttpClient.h>
+#import <IOSLinkedInAPIFix/LIALinkedInApplication.h>
+#import <IOSLinkedInAPIFix/LIALinkedInHttpClient.h>
 #import <linkedin-sdk/LISDK.h>
 
 @import UIKit;
