@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency 'AFNetworking', '>= 2.6.3'
-  s.dependency 'IOSLinkedInAPIFix', '>= 2.0.1'
+  s.dependency 'IOSLinkedInAPIFix', '>= 2.0.2'
 
 end
