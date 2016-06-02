@@ -1,6 +1,9 @@
 # LinkedinSwift
 
 [![CocoaPods](https://img.shields.io/cocoapods/v/LinkedinSwift.svg)](https://github.com/tonyli508/LinkedinSwift.git)
+[![Build Status](https://travis-ci.org/tonyli508/LinkedinSwift.svg?branch=master)](https://travis-ci.org/tonyli508/LinkedinSwift)
+[![codebeat badge](https://codebeat.co/badges/ea9c29be-fbd1-4b51-87ba-3881b6b90641)](https://codebeat.co/projects/github-com-tonyli508-linkedinswift)
+[![Gitter](https://badges.gitter.im/tonyli508/IOSLinkedInAPI.svg)](https://gitter.im/tonyli508/IOSLinkedInAPI?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
 LinkedinSwift is a project for managing native LinkedIn SDK using [CocoaPods](https://cocoapods.org)
