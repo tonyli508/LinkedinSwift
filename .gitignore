@@ -1,2 +1,2 @@
-LinkedinSwift/Pods/
-xcuserdata/
+LinkedinSwift/Pods/**
+xcuserdata/**

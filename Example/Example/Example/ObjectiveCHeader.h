@@ -9,7 +9,6 @@
 #ifndef ObjectiveCHeader_h
 #define ObjectiveCHeader_h
 
-#import <LinkedinSwift/LinkedinSwift.h> // only use this header when you import framework directly
 #import <LinkedinSwift/LSHeader.h> // this will use both for POD and import framework.
 
 #endif /* ObjectiveCHeader_h */

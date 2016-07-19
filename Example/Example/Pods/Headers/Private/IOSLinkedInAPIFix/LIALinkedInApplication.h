@@ -1,0 +1,1 @@
+../../../IOSLinkedInAPIFix/IOSLinkedInAPI/LIALinkedInApplication.h

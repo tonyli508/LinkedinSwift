@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0035D623217B3DC7320F45C9 /* libPods-LinkedinSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E66CB55BA9170DA7148F2E /* libPods-LinkedinSwift.a */; };
 		10476EBB1BFE374800882E23 /* LinkedinSwiftConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 10476EB91BFE374800882E23 /* LinkedinSwiftConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10476EBC1BFE374800882E23 /* LinkedinSwiftConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 10476EBA1BFE374800882E23 /* LinkedinSwiftConfiguration.m */; };
 		10905A6D1BFE6D14002AA119 /* LSResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 10905A6B1BFE6D14002AA119 /* LSResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,7 +22,7 @@
 		10F97B321BFBA10500C420E4 /* LinkedinSwiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B311BFBA10500C420E4 /* LinkedinSwiftTests.m */; };
 		10F97B4B1BFBA66D00C420E4 /* LinkedinSwiftHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10F97B4C1BFBA66D00C420E4 /* LinkedinSwiftHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */; };
-		363EE1ABEC5700B32B5C299D /* libPods-LinkedinSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F32E998DDA99DB37696B30B /* libPods-LinkedinSwift.a */; };
+		D6F21ED9C0AC373C02BAB4CD /* libPods-LinkedinSwiftTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61F83363CF1A4589DC44E84 /* libPods-LinkedinSwiftTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0A4AB937341C136A06480E26 /* Pods-LinkedinSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwift/Pods-LinkedinSwift.release.xcconfig"; sourceTree = "<group>"; };
 		10476EB91BFE374800882E23 /* LinkedinSwiftConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedinSwiftConfiguration.h; path = sources/LinkedinSwiftConfiguration.h; sourceTree = "<group>"; };
 		10476EBA1BFE374800882E23 /* LinkedinSwiftConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedinSwiftConfiguration.m; path = sources/LinkedinSwiftConfiguration.m; sourceTree = "<group>"; };
 		10905A6B1BFE6D14002AA119 /* LSResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSResponse.h; path = sources/LSResponse.h; sourceTree = "<group>"; };
@@ -52,8 +52,12 @@
 		10F97B331BFBA10500C420E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedinSwiftHelper.h; path = sources/LinkedinSwiftHelper.h; sourceTree = "<group>"; };
 		10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedinSwiftHelper.m; path = sources/LinkedinSwiftHelper.m; sourceTree = "<group>"; };
-		7F32E998DDA99DB37696B30B /* libPods-LinkedinSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkedinSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5C005A5A911991676FFF72F /* Pods-LinkedinSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwift/Pods-LinkedinSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		1638B01798C0233F2FDC40D1 /* Pods-LinkedinSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwiftTests/Pods-LinkedinSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		530AC7258F32B5B89DD856E9 /* Pods-LinkedinSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwift/Pods-LinkedinSwift.release.xcconfig"; sourceTree = "<group>"; };
+		53A34C2AF5DDE3DA878A8F1B /* Pods-LinkedinSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwiftTests/Pods-LinkedinSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		59E66CB55BA9170DA7148F2E /* libPods-LinkedinSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkedinSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB1DD014B3F049A32644472 /* Pods-LinkedinSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwift/Pods-LinkedinSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		A61F83363CF1A4589DC44E84 /* libPods-LinkedinSwiftTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkedinSwiftTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10905A701BFE77B8002AA119 /* linkedin-sdk.framework in Frameworks */,
-				363EE1ABEC5700B32B5C299D /* libPods-LinkedinSwift.a in Frameworks */,
+				0035D623217B3DC7320F45C9 /* libPods-LinkedinSwift.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10F97B2D1BFBA10500C420E4 /* LinkedinSwift.framework in Frameworks */,
+				D6F21ED9C0AC373C02BAB4CD /* libPods-LinkedinSwiftTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +88,8 @@
 				10F97B241BFBA10500C420E4 /* LinkedinSwift */,
 				10F97B301BFBA10500C420E4 /* LinkedinSwiftTests */,
 				10F97B231BFBA10500C420E4 /* Products */,
-				E68EFAD7FF5EE830E638A79A /* Pods */,
 				3CF218842F4F8789F95CAD8C /* Frameworks */,
+				75324329B2A7F02088054659 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,16 +141,19 @@
 			isa = PBXGroup;
 			children = (
 				10905A6F1BFE77B8002AA119 /* linkedin-sdk.framework */,
-				7F32E998DDA99DB37696B30B /* libPods-LinkedinSwift.a */,
+				59E66CB55BA9170DA7148F2E /* libPods-LinkedinSwift.a */,
+				A61F83363CF1A4589DC44E84 /* libPods-LinkedinSwiftTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E68EFAD7FF5EE830E638A79A /* Pods */ = {
+		75324329B2A7F02088054659 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B5C005A5A911991676FFF72F /* Pods-LinkedinSwift.debug.xcconfig */,
-				0A4AB937341C136A06480E26 /* Pods-LinkedinSwift.release.xcconfig */,
+				5DB1DD014B3F049A32644472 /* Pods-LinkedinSwift.debug.xcconfig */,
+				530AC7258F32B5B89DD856E9 /* Pods-LinkedinSwift.release.xcconfig */,
+				53A34C2AF5DDE3DA878A8F1B /* Pods-LinkedinSwiftTests.debug.xcconfig */,
+				1638B01798C0233F2FDC40D1 /* Pods-LinkedinSwiftTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -174,12 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10F97B361BFBA10500C420E4 /* Build configuration list for PBXNativeTarget "LinkedinSwift" */;
 			buildPhases = (
-				54FE1FB666DCA6535F52F54D /* Check Pods Manifest.lock */,
+				431C31E17579AECB0F784A3C /* [CP] Check Pods Manifest.lock */,
 				10F97B1D1BFBA10500C420E4 /* Sources */,
 				10F97B1E1BFBA10500C420E4 /* Frameworks */,
 				10F97B1F1BFBA10500C420E4 /* Headers */,
 				10F97B201BFBA10500C420E4 /* Resources */,
-				8FB1B667F884DCDD78B8D486 /* Copy Pods Resources */,
+				21399E5BEDDE1E93D66FBEF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10F97B391BFBA10500C420E4 /* Build configuration list for PBXNativeTarget "LinkedinSwiftTests" */;
 			buildPhases = (
+				5CBA8D8563DAF8403B074525 /* [CP] Check Pods Manifest.lock */,
 				10F97B281BFBA10500C420E4 /* Sources */,
 				10F97B291BFBA10500C420E4 /* Frameworks */,
 				10F97B2A1BFBA10500C420E4 /* Resources */,
+				3FC39B87AF103AC1F2AF841B /* [CP] Embed Pods Frameworks */,
+				67E262E27E6290D0F7E02CD8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,14 +272,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		54FE1FB666DCA6535F52F54D /* Check Pods Manifest.lock */ = {
+		21399E5BEDDE1E93D66FBEF1 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LinkedinSwift/Pods-LinkedinSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FC39B87AF103AC1F2AF841B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LinkedinSwiftTests/Pods-LinkedinSwiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		431C31E17579AECB0F784A3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,19 +317,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8FB1B667F884DCDD78B8D486 /* Copy Pods Resources */ = {
+		5CBA8D8563DAF8403B074525 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LinkedinSwift/Pods-LinkedinSwift-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67E262E27E6290D0F7E02CD8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LinkedinSwiftTests/Pods-LinkedinSwiftTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -414,7 +470,7 @@
 		};
 		10F97B371BFBA10500C420E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B5C005A5A911991676FFF72F /* Pods-LinkedinSwift.debug.xcconfig */;
+			baseConfigurationReference = 5DB1DD014B3F049A32644472 /* Pods-LinkedinSwift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEFINES_MODULE = YES;
@@ -462,7 +518,7 @@
 		};
 		10F97B381BFBA10500C420E4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A4AB937341C136A06480E26 /* Pods-LinkedinSwift.release.xcconfig */;
+			baseConfigurationReference = 530AC7258F32B5B89DD856E9 /* Pods-LinkedinSwift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEFINES_MODULE = YES;
@@ -511,6 +567,7 @@
 		};
 		10F97B3A1BFBA10500C420E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53A34C2AF5DDE3DA878A8F1B /* Pods-LinkedinSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = LinkedinSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -521,6 +578,7 @@
 		};
 		10F97B3B1BFBA10500C420E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1638B01798C0233F2FDC40D1 /* Pods-LinkedinSwiftTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = LinkedinSwiftTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

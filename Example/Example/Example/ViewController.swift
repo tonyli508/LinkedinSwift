@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import LinkedinSwift // Just import the module, I import the framework for example, you just do `pod 'LinkedinSwift', '= 0.9'`
 
 
 class ViewController: UIViewController {
@@ -17,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnProfile: UIButton!
     
     // You still need to set appId and URLScheme in Info.plist, follow this instruction: https://developer.linkedin.com/docs/ios-sdk
-    let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF45sd6ikMMZI", permissions: ["r_basicprofile", "r_emailaddress"], redirectUrl: "https://github.com/tonyli508/LinkedinSwift"))
+    let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF46ikMMZADfdfds", permissions: ["r_basicprofile", "r_emailaddress"], redirectUrl: "https://github.com/tonyli508/LinkedinSwift"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +71,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private func writeConsoleLine(log: String, funcName: String = __FUNCTION__) {
+    private func writeConsoleLine(log: String, funcName: String = #function) {
         
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             self.consoleTextView.insertText("\n")
