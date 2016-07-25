@@ -1,3 +1,4 @@
 LinkedinSwift/Pods/*
-Example/Example/Example.xcworkspace/xcuserdata/**
+/xcuserdata/
 LinkedinSwift/LinkedinSwift.xcworkspace/xcuserdata/
+Podfile.lock

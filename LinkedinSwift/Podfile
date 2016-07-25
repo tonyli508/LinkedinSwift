@@ -5,10 +5,11 @@
 
 target 'LinkedinSwift' do
     pod 'AFNetworking', '>=2.6.3'
-    pod 'IOSLinkedInAPIFix', '= 2.0.4'
+    pod 'IOSLinkedInAPIFix', '>= 2.0.3'
 end
 
 target 'LinkedinSwiftTests' do
-
+    pod 'AFNetworking', '>=2.6.3'
+    pod 'IOSLinkedInAPIFix', '>= 2.0.3'
 end
 
