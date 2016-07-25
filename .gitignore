@@ -1,2 +1,3 @@
-LinkedinSwift/Pods/**
-xcuserdata/**
+LinkedinSwift/Pods/*
+Example/Example/Example.xcworkspace/xcuserdata/**
+LinkedinSwift/LinkedinSwift.xcworkspace/xcuserdata/
