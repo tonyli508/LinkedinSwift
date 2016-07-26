@@ -570,7 +570,9 @@
 			baseConfigurationReference = 53A34C2AF5DDE3DA878A8F1B /* Pods-LinkedinSwiftTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = LinkedinSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ma.car.LinkedinSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -581,7 +583,9 @@
 			baseConfigurationReference = 1638B01798C0233F2FDC40D1 /* Pods-LinkedinSwiftTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = LinkedinSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ma.car.LinkedinSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
