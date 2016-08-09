@@ -121,7 +121,7 @@
         // for now only GET is needed :)
         if ([requestType isEqualToString:LinkedinSwiftRequestGet]) {
             
-            if ([LinkedinSwiftHelper isLinkedinAppInstalled]) {
+            if (lsAccessToken.isFromMobileSDK) {
                 
                 [[LISDKAPIHelper sharedInstance] getRequest:url success:^(LISDKAPIResponse *response) {
                     
