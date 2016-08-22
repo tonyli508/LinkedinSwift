@@ -65,6 +65,16 @@ static LinkedinSwiftRequestType* _Nonnull const LinkedinSwiftRequestDELETE = @"D
 - (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)configuration;
 
 /**
+ *  Init with configuration and web oauth present view controller which oauth-based webview will present in
+ *
+ *  @param _configuration         LinkedinSwiftConfiguration
+ *  @param presentViewController  web oauth present view controller which oauth-based webview will present in
+ *
+ *  @return LinkedinSwiftHelper
+ */
+- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController;
+
+/**
  *  Check if Linkedin app is installed
  *
  *  @return Bool

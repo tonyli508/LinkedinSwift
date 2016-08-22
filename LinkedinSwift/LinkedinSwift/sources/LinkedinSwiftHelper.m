@@ -26,12 +26,16 @@
 #pragma mark Initialization
 
 - (instancetype)initWithConfiguration:(LinkedinSwiftConfiguration*)_configuration {
+    return [self initWithConfiguration:_configuration webOAuthPresentViewController:nil];
+}
+
+- (instancetype)initWithConfiguration:(LinkedinSwiftConfiguration*)_configuration webOAuthPresentViewController:(UIViewController*)presentViewController {
     
     if (self = [super init]) {
         configuration = _configuration;
         
         LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:configuration.redirectUrl clientId:configuration.clientId clientSecret:configuration.clientSecret state:configuration.state grantedAccess:configuration.permissions];
-        httpClient = [LIALinkedInHttpClient clientForApplication:application];
+        httpClient = [LIALinkedInHttpClient clientForApplication:application presentingViewController:presentViewController];
     }
     
     return self;
@@ -131,26 +135,30 @@
                     errorCallback(error);
                 }];
             } else {
-                
-#ifdef isSessionManager
-                [httpClient GET:url parameters:@{@"oauth2_access_token": lsAccessToken.accessToken} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    successCallback([[LSResponse alloc] initWithDictionary:responseObject statusCode:200]);
-                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                    errorCallback(error);
-                }];
-#else
-                
-                [httpClient GET:url parameters:@{@"oauth2_access_token": lsAccessToken.accessToken} success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-                    
-                    successCallback([[LSResponse alloc] initWithDictionary:responseObject statusCode:200]);
-                } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-                    
-                    errorCallback(error);
-                }];
-#endif
+                [self httpClientRequestWithURL:url success:successCallback erorr:errorCallback];
             }
         }
     }
+}
+
+- (void)httpClientRequestWithURL:(NSString*)url success:(LinkedinSwiftRequestSuccessCallback)successCallback erorr:(LinkedinSwiftRequestErrorCallback)errorCallback {
+    
+#ifdef isSessionManager
+    [httpClient GET:url parameters:@{@"oauth2_access_token": lsAccessToken.accessToken} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successCallback([[LSResponse alloc] initWithDictionary:responseObject statusCode:200]);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        errorCallback(error);
+    }];
+#else
+    
+    [httpClient GET:url parameters:@{@"oauth2_access_token": lsAccessToken.accessToken} success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        
+        successCallback([[LSResponse alloc] initWithDictionary:responseObject statusCode:200]);
+    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+        
+        errorCallback(error);
+    }];
+#endif
 }
 
 #pragma mark -
