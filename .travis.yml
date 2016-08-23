@@ -7,5 +7,3 @@ podfile: LinkedinSwift/Podfile
 before_install:
   - gem install activesupport -v 4.2.6
   - gem install cocoapods -v '1.0.1'
-  - pod repo remove master
-  - pod setup
