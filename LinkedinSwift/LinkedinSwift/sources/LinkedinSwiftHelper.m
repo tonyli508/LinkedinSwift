@@ -9,8 +9,9 @@
 #import "LinkedinSwiftHelper.h"
 
 #import "LinkedinSwiftConfiguration.h"
-#import <IOSLinkedInAPIFix/LIALinkedInApplication.h>
-#import <IOSLinkedInAPIFix/LIALinkedInHttpClient.h>
+#import "NativeAppInstalledChecker.h"
+#import "LinkedinNativeClient.h"
+#import "LinkedinOAuthWebClient.h"
 #import <linkedin-sdk/LISDK.h>
 
 @import UIKit;
@@ -18,7 +19,9 @@
 @implementation LinkedinSwiftHelper
 {
     LinkedinSwiftConfiguration *configuration;
-    LIALinkedInHttpClient *httpClient;
+    NativeAppInstalledChecker *checker;
+    NSObject<LinkedinClient> *nativeClient;
+    NSObject<LinkedinClient> *webClient;
 }
 @synthesize lsAccessToken;
 
@@ -26,16 +29,32 @@
 #pragma mark Initialization
 
 - (instancetype)initWithConfiguration:(LinkedinSwiftConfiguration*)_configuration {
-    return [self initWithConfiguration:_configuration webOAuthPresentViewController:nil];
+    return [self initWithConfiguration:_configuration nativeAppChecker:nil clients:nil webOAuthPresentViewController:nil];
 }
 
-- (instancetype)initWithConfiguration:(LinkedinSwiftConfiguration*)_configuration webOAuthPresentViewController:(UIViewController*)presentViewController {
+- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nullable)_checker clients:(NSArray <id<LinkedinClient>>* _Nullable)clients webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController {
     
     if (self = [super init]) {
+        if (_checker == nil) {
+            checker = [NativeAppInstalledChecker new]; // create default NativeAppInstalledChecker if user not passing one 
+        } else {
+            checker = _checker;
+        }
+        if (clients == nil) {
+            nativeClient = [[LinkedinNativeClient alloc] initWithPermissions:_configuration.permissions];
+            webClient = [[LinkedinOAuthWebClient alloc] initWithRedirectURL:_configuration.redirectUrl
+                                                                   clientId:_configuration.clientId
+                                                               clientSecret:_configuration.clientSecret
+                                                                      state:_configuration.state
+                                                                permissions:_configuration.permissions
+                                                                    present:presentViewController];
+        } else {
+            // first is the native client, second is the web client
+            nativeClient = [clients objectAtIndex:0];
+            webClient = [clients objectAtIndex:1];
+        }
         configuration = _configuration;
         
-        LIALinkedInApplication *application = [LIALinkedInApplication applicationWithRedirectURL:configuration.redirectUrl clientId:configuration.clientId clientSecret:configuration.clientSecret state:configuration.state grantedAccess:configuration.permissions];
-        httpClient = [LIALinkedInHttpClient clientForApplication:application presentingViewController:presentViewController];
     }
     
     return self;
@@ -52,66 +71,15 @@
     if (lsAccessToken != nil && [lsAccessToken.expireDate timeIntervalSinceNow] > 0) {
         successCallback(lsAccessToken);
     } else {
+        
         __block LinkedinSwiftHelper *this = self;
-        if ([LinkedinSwiftHelper isLinkedinAppInstalled]) {
-            
-            /**
-             *  If Linkedin app installed, use Linkedin sdk
-             */
-            __block LISDKSession *session = [[LISDKSessionManager sharedInstance] session];
-            
-            // check if session is still cached
-            if (session && session.isValid) {
-                
-                this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration fromMobileSDK: YES];
-                successCallback(this->lsAccessToken);
-            } else {
-                
-                // no cache, create a new session
-                [LISDKSessionManager createSessionWithAuth:configuration.permissions state:@"GET-ACCESS-TOKEN" showGoToAppStoreDialog:YES successBlock:^(NSString *returnState) {
-                    
-                    // refresh session
-                    session = [[LISDKSessionManager sharedInstance] session];
-                    this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:session.accessToken.accessTokenValue expireDate:session.accessToken.expiration fromMobileSDK: YES];
-                    successCallback(this->lsAccessToken);
-                    
-                } errorBlock:^(NSError *error) {
-                    // error code 3 means user cancelled, LISDKErrorCode.USER_CANCELLED doesn't work
-                    if (error.code == 3) {
-                        cancelCallback();
-                    } else {
-                        errorCallback(error);
-                    }
-                }];
-            }
-        } else {
-            
-            /**
-             *  If Linkedin app is not installed, present a model webview to let use login
-             *
-             *  WARNING: here we can check the cache save api call as well,
-             *  but there is a problem when you login on other devices the accessToken you cached will invalid,
-             *  and only you use this will be notice this, so I choose don't use this cache
-             */
-            [httpClient getAuthorizationCode:^(NSString *code) {
-                
-                [this->httpClient getAccessToken:code success:^(NSDictionary *dictionary) {
-                    
-                    NSString *accessToken = [dictionary objectForKey:@"access_token"];
-                    NSNumber *expiresInSec = [dictionary objectForKey:@"expires_in"];
-                    
-                    this->lsAccessToken = [[LSLinkedinToken alloc] initWithAccessToken:accessToken expireDate:[NSDate dateWithTimeIntervalSinceNow:expiresInSec.doubleValue] fromMobileSDK: NO];
-                    successCallback(this->lsAccessToken);
-                } failure:^(NSError *error) {
-                    errorCallback(error);
-                }];
-                
-            } cancel:^{
-                cancelCallback();
-            } failure:^(NSError *error) {
-                errorCallback(error);
-            }];
-        }
+        LinkedinSwiftAuthRequestSuccessCallback __successCallback = ^(LSLinkedinToken * _Nonnull token) {
+            this->lsAccessToken = token;
+            successCallback(lsAccessToken);
+        };
+        
+        NSObject<LinkedinClient> *client = [checker isLinkedinAppInstalled] ? nativeClient : webClient;
+        [client authorizeSuccess:__successCallback error:errorCallback cancel:cancelCallback];
     }
 }
 
@@ -124,48 +92,17 @@
     if (lsAccessToken != nil) {
         // for now only GET is needed :)
         if ([requestType isEqualToString:LinkedinSwiftRequestGet]) {
-            
-            if (lsAccessToken.isFromMobileSDK) {
-                
-                [[LISDKAPIHelper sharedInstance] getRequest:url success:^(LISDKAPIResponse *response) {
-                    
-                    successCallback([[LSResponse alloc] initWithString:response.data statusCode:response.statusCode]);
-                } error:^(LISDKAPIError *error) {
-                    
-                    errorCallback(error);
-                }];
-            } else {
-                [self httpClientRequestWithURL:url success:successCallback erorr:errorCallback];
-            }
+            NSObject<LinkedinClient> *client = lsAccessToken.isFromMobileSDK ? nativeClient : webClient;
+            [client requestURL:url requestType:requestType token:lsAccessToken success:successCallback error:errorCallback];
         }
     }
-}
-
-- (void)httpClientRequestWithURL:(NSString*)url success:(LinkedinSwiftRequestSuccessCallback)successCallback erorr:(LinkedinSwiftRequestErrorCallback)errorCallback {
-    
-#ifdef isSessionManager
-    [httpClient GET:url parameters:@{@"oauth2_access_token": lsAccessToken.accessToken} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        successCallback([[LSResponse alloc] initWithDictionary:responseObject statusCode:200]);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        errorCallback(error);
-    }];
-#else
-    
-    [httpClient GET:url parameters:@{@"oauth2_access_token": lsAccessToken.accessToken} success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
-        
-        successCallback([[LSResponse alloc] initWithDictionary:responseObject statusCode:200]);
-    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-        
-        errorCallback(error);
-    }];
-#endif
 }
 
 #pragma mark -
 #pragma mark Static functions
 
 + (BOOL)isLinkedinAppInstalled {
-    return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"linkedin://"]];
+    return [[NativeAppInstalledChecker new] isLinkedinAppInstalled];
 }
 
 + (BOOL)shouldHandleUrl:(NSURL *)url {

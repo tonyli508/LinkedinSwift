@@ -8,41 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "LSLinkedinToken.h"
-#import "LSResponse.h"
-
+#import "LSTypesHeader.h"
 #import <UIKit/UIKit.h>
 
-/**
- *  LinkedinSwiftRequestSuccessCallback
- *
- *  @param response LSResponse
- */
-typedef void(^LinkedinSwiftRequestSuccessCallback)(LSResponse * _Nonnull response);
-/**
- *  LinkedinSwiftAuthRequestSuccessCallback
- *
- *  @param token LSLinkedinToken
- */
-typedef void(^LinkedinSwiftAuthRequestSuccessCallback)(LSLinkedinToken * _Nonnull token);
-/**
- *  LinkedinSwiftRequestErrorCallback
- *
- *  @param error NSError
- */
-typedef void(^LinkedinSwiftRequestErrorCallback)(NSError * _Nonnull error);
-/**
- *  LinkedinSwiftRequestCancelCallback
- */
-typedef void(^LinkedinSwiftRequestCancelCallback)(void);
 
-typedef NSString LinkedinSwiftRequestType;
-static LinkedinSwiftRequestType* _Nonnull const LinkedinSwiftRequestGet = @"GET";
-static LinkedinSwiftRequestType* _Nonnull const LinkedinSwiftRequestPOST = @"POST";
-static LinkedinSwiftRequestType* _Nonnull const LinkedinSwiftRequestPUT = @"PUT";
-static LinkedinSwiftRequestType* _Nonnull const LinkedinSwiftRequestDELETE = @"DELETE";
-
-@class LSLinkedinToken, LinkedinSwiftConfiguration;
+@class LSLinkedinToken, LinkedinSwiftConfiguration, NativeAppInstalledChecker;
 /**
  *  LinkedinSwiftHelper
  */
@@ -68,11 +38,13 @@ static LinkedinSwiftRequestType* _Nonnull const LinkedinSwiftRequestDELETE = @"D
  *  Init with configuration and web oauth present view controller which oauth-based webview will present in
  *
  *  @param _configuration         LinkedinSwiftConfiguration
+ *  @param _checker               NativeAppInstalledChecker for check if has linkedin native app installed
+ *  @param clients                LinkedinClients passing in, first one is native client and second is web client, if not passing in will create itself
  *  @param presentViewController  web oauth present view controller which oauth-based webview will present in
  *
  *  @return LinkedinSwiftHelper
  */
-- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController;
+- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nullable)_checker clients:(NSArray <id<LinkedinClient>>* _Nullable)clients webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController;
 
 /**
  *  Check if Linkedin app is installed
