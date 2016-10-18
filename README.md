@@ -95,7 +95,3 @@ Example project screenshots:
 <img src="https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg" alt="Demo photo" width="56" height="100" />
 </p>
 
-## Known issues
-
-It seems Linkedin 1.0.7 messed up with `Bitcode support.` again. You need to turn off Bitcode to make it work.
-
