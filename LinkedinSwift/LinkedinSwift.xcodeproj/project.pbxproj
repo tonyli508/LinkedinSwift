@@ -29,7 +29,7 @@
 		10F97B321BFBA10500C420E4 /* LinkedinSwiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B311BFBA10500C420E4 /* LinkedinSwiftTests.m */; };
 		10F97B4B1BFBA66D00C420E4 /* LinkedinSwiftHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10F97B4C1BFBA66D00C420E4 /* LinkedinSwiftHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */; };
-		39EA8DEB1DB6A33000F0A1E1 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA8DEA1DB6A32F00F0A1E1 /* linkedin-sdk.framework */; };
+		39D450B31DB6A7DB00E6BFC2 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39D450B21DB6A7DB00E6BFC2 /* linkedin-sdk.framework */; };
 		D6F21ED9C0AC373C02BAB4CD /* libPods-LinkedinSwiftTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61F83363CF1A4589DC44E84 /* libPods-LinkedinSwiftTests.a */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +73,7 @@
 		10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedinSwiftHelper.h; path = sources/LinkedinSwiftHelper.h; sourceTree = "<group>"; };
 		10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedinSwiftHelper.m; path = sources/LinkedinSwiftHelper.m; sourceTree = "<group>"; };
 		1638B01798C0233F2FDC40D1 /* Pods-LinkedinSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwiftTests/Pods-LinkedinSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		39EA8DEA1DB6A32F00F0A1E1 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
+		39D450B21DB6A7DB00E6BFC2 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
 		530AC7258F32B5B89DD856E9 /* Pods-LinkedinSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwift/Pods-LinkedinSwift.release.xcconfig"; sourceTree = "<group>"; };
 		53A34C2AF5DDE3DA878A8F1B /* Pods-LinkedinSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwiftTests/Pods-LinkedinSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59E66CB55BA9170DA7148F2E /* libPods-LinkedinSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkedinSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0035D623217B3DC7320F45C9 /* libPods-LinkedinSwift.a in Frameworks */,
-				39EA8DEB1DB6A33000F0A1E1 /* linkedin-sdk.framework in Frameworks */,
+				39D450B31DB6A7DB00E6BFC2 /* linkedin-sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +190,7 @@
 		3CF218842F4F8789F95CAD8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				39EA8DEA1DB6A32F00F0A1E1 /* linkedin-sdk.framework */,
+				39D450B21DB6A7DB00E6BFC2 /* linkedin-sdk.framework */,
 				59E66CB55BA9170DA7148F2E /* libPods-LinkedinSwift.a */,
 				A61F83363CF1A4589DC44E84 /* libPods-LinkedinSwiftTests.a */,
 			);
@@ -546,10 +546,10 @@
 					"$(PROJECT_DIR)/LinkedinSwift",
 					"$(PROJECT_DIR)/LinkedinSwift/sources",
 					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/LinkedinSwift/sources/Entities",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(inherited)/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 					"\"${PODS_ROOT}/Headers/Public/IOSLinkedInAPI\"",
@@ -557,8 +557,9 @@
 				);
 				INFOPLIST_FILE = LinkedinSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -576,7 +577,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ma.car.LinkedinSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/** $(inherited)";
 			};
 			name = Debug;
 		};
@@ -596,10 +597,10 @@
 					"$(PROJECT_DIR)/LinkedinSwift",
 					"$(PROJECT_DIR)/LinkedinSwift/sources",
 					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/LinkedinSwift/sources/Entities",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(inherited)/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 					"\"${PODS_ROOT}/Headers/Public/IOSLinkedInAPI\"",
@@ -607,9 +608,9 @@
 				);
 				INFOPLIST_FILE = LinkedinSwift/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -627,7 +628,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ma.car.LinkedinSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/** $(inherited)";
 			};
 			name = Release;
 		};
