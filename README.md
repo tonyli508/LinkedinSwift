@@ -22,11 +22,25 @@ Check out Example project.
 
 - Setup configuration and helper instance.
 ```swift
-let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF45DIWOERCM", permissions: ["r_basicprofile", "r_emailaddress"]))
+let linkedinHelper = LinkedinSwiftHelper(configuration: 
+    LinkedinSwiftConfiguration(
+        clientId: "77tn2ar7gq6lgv", 
+        clientSecret: "iqkDGYpWdhf7WKzA", 
+        state: "DLKDJF45DIWOERCM", 
+        permissions: ["r_basicprofile", "r_emailaddress"]
+    )
+)
 ```
 Or if you want to present in a different ViewController, using:
 ```swift
-let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF45DIWOERCM", permissions: ["r_basicprofile", "r_emailaddress"]), webOAuthPresent: yourViewController)
+let linkedinHelper = LinkedinSwiftHelper(
+    configuration: LinkedinSwiftConfiguration(
+        clientId: "77tn2ar7gq6lgv", 
+        clientSecret: "iqkDGYpWdhf7WKzA", 
+        state: "DLKDJF45DIWOERCM", 
+        permissions: ["r_basicprofile", "r_emailaddress"]
+    ), webOAuthPresent: yourViewController
+)
 ```
 - Setup Linkedin SDK settings: [instruction here](https://developer.linkedin.com/docs/ios-sdk)
 - Setup redirect handler in AppDelegate
@@ -36,7 +50,11 @@ let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfigurati
 	
         // Linkedin sdk handle redirect
         if LinkedinSwiftHelper.shouldHandleUrl(url) {
-            return LinkedinSwiftHelper.application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)
+            return LinkedinSwiftHelper.application(application, 
+                    openURL: url, 
+                    sourceApplication: sourceApplication, 
+                    annotation: annotation
+            )
         }
         
         return false
@@ -56,7 +74,9 @@ let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfigurati
 - Fetch profile:
 ```swift
 
-		linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~?format=json", requestType: LinkedinSwiftRequestGet, success: { (response) -> Void in
+		linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~?format=json", 
+            requestType: LinkedinSwiftRequestGet, 
+            success: { (response) -> Void in
             
             //Request success response
             
