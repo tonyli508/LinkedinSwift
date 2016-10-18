@@ -46,7 +46,10 @@ let linkedinHelper = LinkedinSwiftHelper(
 - Setup redirect handler in AppDelegate
 ```swift
 
-	func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+	func application(application: UIApplication, 
+            openURL url: NSURL, 
+            sourceApplication: String?, 
+            annotation: AnyObject) -> Bool {
 	
         // Linkedin sdk handle redirect
         if LinkedinSwiftHelper.shouldHandleUrl(url) {
