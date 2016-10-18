@@ -534,7 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DB1DD014B3F049A32644472 /* Pods-LinkedinSwift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -546,7 +546,7 @@
 					"$(PROJECT_DIR)/LinkedinSwift",
 					"$(PROJECT_DIR)/LinkedinSwift/sources",
 					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/LinkedinSwift/sources/Entities",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)/**",
@@ -559,6 +559,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -584,7 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 530AC7258F32B5B89DD856E9 /* Pods-LinkedinSwift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -596,7 +597,7 @@
 					"$(PROJECT_DIR)/LinkedinSwift",
 					"$(PROJECT_DIR)/LinkedinSwift/sources",
 					"$(PROJECT_DIR)/**",
-					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/LinkedinSwift/sources/Entities",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)/**",
@@ -609,7 +610,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
