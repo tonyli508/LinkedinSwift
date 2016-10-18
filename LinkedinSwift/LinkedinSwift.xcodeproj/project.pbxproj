@@ -16,9 +16,7 @@
 		10682E1B1D744C79006D3715 /* LinkedinSwiftConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 10682E191D744C79006D3715 /* LinkedinSwiftConfiguration.m */; };
 		10682E1E1D744D23006D3715 /* NativeAppInstalledChecker.h in Headers */ = {isa = PBXBuildFile; fileRef = 10682E1C1D744D23006D3715 /* NativeAppInstalledChecker.h */; };
 		10682E1F1D744D23006D3715 /* NativeAppInstalledChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 10682E1D1D744D23006D3715 /* NativeAppInstalledChecker.m */; };
-		10905A701BFE77B8002AA119 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10905A6F1BFE77B8002AA119 /* linkedin-sdk.framework */; };
 		10905AA31BFE95B5002AA119 /* LSHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 10905AA21BFE95B5002AA119 /* LSHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10905AAB1BFF1F67002AA119 /* linkedin-sdk.framework in Headers */ = {isa = PBXBuildFile; fileRef = 10905A6F1BFE77B8002AA119 /* linkedin-sdk.framework */; settings = {ATTRIBUTES = (Public, ); }; };
 		10B3421E1D7490DE00B1F88F /* LinkedinNativeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 10B3421C1D7490DE00B1F88F /* LinkedinNativeClient.h */; };
 		10B3421F1D7490DE00B1F88F /* LinkedinNativeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B3421D1D7490DE00B1F88F /* LinkedinNativeClient.m */; };
 		10B342221D7490F700B1F88F /* LinkedinOAuthWebClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 10B342201D7490F700B1F88F /* LinkedinOAuthWebClient.h */; };
@@ -31,6 +29,7 @@
 		10F97B321BFBA10500C420E4 /* LinkedinSwiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B311BFBA10500C420E4 /* LinkedinSwiftTests.m */; };
 		10F97B4B1BFBA66D00C420E4 /* LinkedinSwiftHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10F97B4C1BFBA66D00C420E4 /* LinkedinSwiftHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */; };
+		39EA8DEB1DB6A33000F0A1E1 /* linkedin-sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA8DEA1DB6A32F00F0A1E1 /* linkedin-sdk.framework */; };
 		D6F21ED9C0AC373C02BAB4CD /* libPods-LinkedinSwiftTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A61F83363CF1A4589DC44E84 /* libPods-LinkedinSwiftTests.a */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +52,6 @@
 		10682E191D744C79006D3715 /* LinkedinSwiftConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedinSwiftConfiguration.m; path = sources/Entities/LinkedinSwiftConfiguration.m; sourceTree = "<group>"; };
 		10682E1C1D744D23006D3715 /* NativeAppInstalledChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NativeAppInstalledChecker.h; path = sources/NativeAppInstalledChecker.h; sourceTree = "<group>"; };
 		10682E1D1D744D23006D3715 /* NativeAppInstalledChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NativeAppInstalledChecker.m; path = sources/NativeAppInstalledChecker.m; sourceTree = "<group>"; };
-		10905A6F1BFE77B8002AA119 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "linkedin-sdk.framework"; path = "../linkedin-sdk.framework"; sourceTree = "<group>"; };
 		10905AA21BFE95B5002AA119 /* LSHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSHeader.h; path = sources/LSHeader.h; sourceTree = "<group>"; };
 		10B3421C1D7490DE00B1F88F /* LinkedinNativeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedinNativeClient.h; path = sources/LinkedinNativeClient.h; sourceTree = "<group>"; };
 		10B3421D1D7490DE00B1F88F /* LinkedinNativeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedinNativeClient.m; path = sources/LinkedinNativeClient.m; sourceTree = "<group>"; };
@@ -75,6 +73,7 @@
 		10F97B481BFBA66D00C420E4 /* LinkedinSwiftHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedinSwiftHelper.h; path = sources/LinkedinSwiftHelper.h; sourceTree = "<group>"; };
 		10F97B491BFBA66D00C420E4 /* LinkedinSwiftHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedinSwiftHelper.m; path = sources/LinkedinSwiftHelper.m; sourceTree = "<group>"; };
 		1638B01798C0233F2FDC40D1 /* Pods-LinkedinSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwiftTests/Pods-LinkedinSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		39EA8DEA1DB6A32F00F0A1E1 /* linkedin-sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = "linkedin-sdk.framework"; sourceTree = "<group>"; };
 		530AC7258F32B5B89DD856E9 /* Pods-LinkedinSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwift/Pods-LinkedinSwift.release.xcconfig"; sourceTree = "<group>"; };
 		53A34C2AF5DDE3DA878A8F1B /* Pods-LinkedinSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LinkedinSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LinkedinSwiftTests/Pods-LinkedinSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59E66CB55BA9170DA7148F2E /* libPods-LinkedinSwift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LinkedinSwift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,8 +86,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10905A701BFE77B8002AA119 /* linkedin-sdk.framework in Frameworks */,
 				0035D623217B3DC7320F45C9 /* libPods-LinkedinSwift.a in Frameworks */,
+				39EA8DEB1DB6A33000F0A1E1 /* linkedin-sdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,7 +190,7 @@
 		3CF218842F4F8789F95CAD8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10905A6F1BFE77B8002AA119 /* linkedin-sdk.framework */,
+				39EA8DEA1DB6A32F00F0A1E1 /* linkedin-sdk.framework */,
 				59E66CB55BA9170DA7148F2E /* libPods-LinkedinSwift.a */,
 				A61F83363CF1A4589DC44E84 /* libPods-LinkedinSwiftTests.a */,
 			);
@@ -222,7 +221,6 @@
 				10F97B4B1BFBA66D00C420E4 /* LinkedinSwiftHelper.h in Headers */,
 				10682E161D744C44006D3715 /* LSResponse.h in Headers */,
 				10F97B261BFBA10500C420E4 /* LinkedinSwift.h in Headers */,
-				10905AAB1BFF1F67002AA119 /* linkedin-sdk.framework in Headers */,
 				10682E1E1D744D23006D3715 /* NativeAppInstalledChecker.h in Headers */,
 				10B342221D7490F700B1F88F /* LinkedinOAuthWebClient.h in Headers */,
 				10682E141D744C44006D3715 /* LSLinkedinToken.h in Headers */,
@@ -542,12 +540,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1.3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LinkedinSwift",
 					"$(PROJECT_DIR)/LinkedinSwift/sources",
 					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -591,12 +590,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1.3;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LinkedinSwift",
 					"$(PROJECT_DIR)/LinkedinSwift/sources",
 					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

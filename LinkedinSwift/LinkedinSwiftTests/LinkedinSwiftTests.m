@@ -36,7 +36,7 @@
     webClient = [[MockLinkedinWebClient alloc] initWithRedirectURL:configuration.redirectUrl clientId:configuration.clientId clientSecret:configuration.clientSecret state:configuration.state permissions:configuration.permissions present:nil];
     nativeClient = [[MockLinkedinNativeClient alloc] initWithPermissions:configuration.permissions];
     // create helper instance
-    helper = [[LinkedinSwiftHelper alloc] initWithConfiguration:configuration nativeAppChecker:checker clients:@[nativeClient, webClient] webOAuthPresentViewController:nil];
+    helper = [[LinkedinSwiftHelper alloc] initWithConfiguration:configuration nativeAppChecker:checker clients:@[nativeClient, webClient] webOAuthPresentViewController:nil persistedLSToken:nil];
 }
 
 - (void)tearDown {

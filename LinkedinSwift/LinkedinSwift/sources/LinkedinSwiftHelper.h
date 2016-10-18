@@ -41,10 +41,11 @@
  *  @param _checker               NativeAppInstalledChecker for check if has linkedin native app installed
  *  @param clients                LinkedinClients passing in, first one is native client and second is web client, if not passing in will create itself
  *  @param presentViewController  web oauth present view controller which oauth-based webview will present in
+ *  @param lsToken                if you persist lsAccessToken in your app, you can set this so won't need to login again, just keep in mind to check expire date before passing in
  *
  *  @return LinkedinSwiftHelper
  */
-- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nullable)_checker clients:(NSArray <id<LinkedinClient>>* _Nullable)clients webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController;
+- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nullable)_checker clients:(NSArray <id<LinkedinClient>>* _Nullable)clients webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController persistedLSToken:(LSLinkedinToken* _Nullable)lsToken;
 
 /**
  *  Check if Linkedin app is installed

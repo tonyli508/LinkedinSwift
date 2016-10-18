@@ -29,16 +29,19 @@
 #pragma mark Initialization
 
 - (instancetype)initWithConfiguration:(LinkedinSwiftConfiguration*)_configuration {
-    return [self initWithConfiguration:_configuration nativeAppChecker:nil clients:nil webOAuthPresentViewController:nil];
+    return [self initWithConfiguration:_configuration nativeAppChecker:nil clients:nil webOAuthPresentViewController:nil persistedLSToken:nil];
 }
 
-- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nullable)_checker clients:(NSArray <id<LinkedinClient>>* _Nullable)clients webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController {
+- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nullable)_checker clients:(NSArray <id<LinkedinClient>>* _Nullable)clients webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController persistedLSToken:(LSLinkedinToken* _Nullable)lsToken {
     
     if (self = [super init]) {
         if (_checker == nil) {
             checker = [NativeAppInstalledChecker new]; // create default NativeAppInstalledChecker if user not passing one 
         } else {
             checker = _checker;
+        }
+        if (lsToken != nil) {
+            lsAccessToken = lsToken;
         }
         if (clients == nil) {
             nativeClient = [[LinkedinNativeClient alloc] initWithPermissions:_configuration.permissions];
