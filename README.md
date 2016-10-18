@@ -15,7 +15,7 @@ Latest version is based on [LinkedIn SDK 1.0.7](https://content.linkedin.com/con
 ## How to use
 
 ```ruby
-pod 'LinkedinSwift', '~> 1.6.5'
+pod 'LinkedinSwift', '~> 1.6.6'
 ```
 
 Check out Example project.
@@ -23,6 +23,10 @@ Check out Example project.
 - Setup configuration and helper instance.
 ```swift
 let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF45DIWOERCM", permissions: ["r_basicprofile", "r_emailaddress"]))
+```
+Or if you want to present in a different ViewController, using:
+```swift
+let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF45DIWOERCM", permissions: ["r_basicprofile", "r_emailaddress"]), webOAuthPresent: yourViewController)
 ```
 - Setup Linkedin SDK settings: [instruction here](https://developer.linkedin.com/docs/ios-sdk)
 - Setup redirect handler in AppDelegate
