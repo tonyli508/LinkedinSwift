@@ -534,7 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DB1DD014B3F049A32644472 /* Pods-LinkedinSwift.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -549,7 +549,7 @@
 					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(inherited)/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 					"\"${PODS_ROOT}/Headers/Public/IOSLinkedInAPI\"",
@@ -576,7 +576,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ma.car.LinkedinSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/** $(inherited)";
 			};
 			name = Debug;
 		};
@@ -584,7 +584,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 530AC7258F32B5B89DD856E9 /* Pods-LinkedinSwift.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -599,7 +599,7 @@
 					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
+					"$(inherited)/**",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
 					"\"${PODS_ROOT}/Headers/Public/IOSLinkedInAPI\"",
@@ -627,7 +627,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ma.car.LinkedinSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/** $(inherited)";
 			};
 			name = Release;
 		};
