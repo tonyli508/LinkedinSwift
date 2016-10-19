@@ -9,8 +9,8 @@
 #ifndef LSTypesHeader_h
 #define LSTypesHeader_h
 
-#import "./Entities/LSLinkedinToken.h"
-#import "./Entities/LSResponse.h"
+#import "Entities/LSLinkedinToken.h"
+#import "Entities/LSResponse.h"
 
 /**
  *  LinkedinSwiftRequestSuccessCallback
