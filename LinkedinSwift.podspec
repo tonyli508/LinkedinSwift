@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LinkedinSwift"
-  s.version      = "1.7.1"
+  s.version      = "1.7.2"
   s.summary      = "Linkedin Oauth Helper, depend on Linkedin Native App installed or not, using Linkdin IOS SDK or UIWebView to login, support Swift with iOS 7"
 
   s.homepage     = "https://github.com/tonyli508/LinkedinSwift.git"
@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
 
   s.dependency 'AFNetworking', '>= 3.1.0'
   s.dependency 'IOSLinkedInAPIFix', '>= 2.0.4'
-
+  
 end
