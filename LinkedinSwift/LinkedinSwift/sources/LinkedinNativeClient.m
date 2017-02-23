@@ -64,4 +64,9 @@
     }];
 }
 
+
++ (void)clearSession {
+    [LISDKSessionManager clearSession];
+}
+
 @end

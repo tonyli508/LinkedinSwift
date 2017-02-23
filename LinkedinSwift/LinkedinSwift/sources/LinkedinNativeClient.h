@@ -22,4 +22,9 @@
  */
 - (instancetype)initWithPermissions:(NSArray *)permissions;
 
+/**
+ *  Clear any open session
+ **/
++ (void)clearSession;
+
 @end
