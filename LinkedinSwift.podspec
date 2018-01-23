@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Li Jiantang" => "tonyli508@gmail.com" }
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '8.1'
 
   s.source = { :git => "https://github.com/tonyli508/LinkedinSwift.git", :tag => "#{s.version}" }
   s.source_files        = 'LinkedinSwift/LinkedinSwift/sources/*.*', 'LinkedinSwift/LinkedinSwift/sources/Entities/*.*'
