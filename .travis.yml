@@ -4,3 +4,5 @@ xcode_workspace: LinkedinSwift/LinkedinSwift.xcworkspace/
 xcode_scheme: LinkedinSwift
 xcode_sdk: iphonesimulator
 podfile: LinkedinSwift/Podfile
+script:
+    - xcodebuild clean build -sdk iphonesimulator -workspace LinkedinSwift/LinkedinSwift.xcworkspace -scheme LinkedinSwiftTests CODE_SIGNING_REQUIRED=NO
