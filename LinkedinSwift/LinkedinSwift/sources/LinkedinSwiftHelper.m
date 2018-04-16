@@ -86,6 +86,12 @@
     }
 }
 
+- (void)logout {
+    /// logout all sessions
+    [nativeClient logout];
+    [webClient logout];
+}
+
 #pragma mark -
 #pragma mark Request
 

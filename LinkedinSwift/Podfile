@@ -4,12 +4,12 @@
 # use_frameworks!
 
 target 'LinkedinSwift' do
-    pod 'AFNetworking', '>=2.6.3'
-    pod 'IOSLinkedInAPIFix', '>= 2.0.3'
+    pod 'AFNetworking', '>=3.2.0'
+    pod 'IOSLinkedInAPIFix', '>= 2.0.4'
 end
 
 target 'LinkedinSwiftTests' do
-    pod 'AFNetworking', '>=2.6.3'
-    pod 'IOSLinkedInAPIFix', '>= 2.0.3'
+    pod 'AFNetworking', '>=3.2.0'
+    pod 'IOSLinkedInAPIFix', '>= 2.0.4'
 end
 

@@ -64,4 +64,8 @@
     }];
 }
 
+- (void)logout {
+    [LISDKSessionManager clearSession];
+}
+
 @end

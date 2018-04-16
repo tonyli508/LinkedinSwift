@@ -70,4 +70,15 @@
 #endif
 }
 
+- (void)logout {
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    /// for now use key directly from there
+    /// TODO: move this function to LIALinkedinAPI
+    [userDefaults removeObjectForKey:@"linkedin_token"];
+    [userDefaults removeObjectForKey:@"linkedin_expiration"];
+    [userDefaults removeObjectForKey:@"linkedin_token_created_at"];
+    [userDefaults synchronize];
+}
+
 @end

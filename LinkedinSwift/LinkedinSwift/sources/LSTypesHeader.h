@@ -63,6 +63,12 @@ static LinkedinSwiftRequestType* _Nonnull const LinkedinSwiftRequestDELETE = @"D
  */
 - (void)requestURL:(NSString* _Nonnull)url requestType:(LinkedinSwiftRequestType* _Nonnull)requestType token:(LSLinkedinToken* _Nonnull)token success:(__nullable LinkedinSwiftRequestSuccessCallback)success error:(__nullable LinkedinSwiftRequestErrorCallback)error;
 
+
+/**
+ Logout current session
+ */
+- (void)logout;
+
 @end
 
 

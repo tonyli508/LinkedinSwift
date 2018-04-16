@@ -31,4 +31,6 @@
 - (instancetype)initWithRedirectURL:(NSString*)redirectURL clientId:(NSString*)clientId clientSecret:(NSString*)clientSecret state:(NSString*)state permissions:(NSArray*)permissions present:(UIViewController*)presentViewController;
 
 
+- (void)logout;
+
 @end

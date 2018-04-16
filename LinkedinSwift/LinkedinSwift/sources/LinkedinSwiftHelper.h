@@ -82,4 +82,10 @@
 + (BOOL)application:(UIApplication* _Nonnull)application openURL:(NSURL* _Nullable)url sourceApplication:(NSString* _Nullable)sourceApplication annotation:(id _Nullable)annotation;
 
 
+/**
+ Logout current Linkedin user
+ */
+- (void)logout;
+
+
 @end

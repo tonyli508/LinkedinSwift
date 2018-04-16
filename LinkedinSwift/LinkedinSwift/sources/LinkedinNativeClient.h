@@ -22,4 +22,7 @@
  */
 - (instancetype)initWithPermissions:(NSArray *)permissions;
 
+
+- (void)logout;
+
 @end
