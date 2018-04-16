@@ -15,7 +15,7 @@ Latest version is based on [LinkedIn SDK 1.0.7](https://content.linkedin.com/con
 ## How to use
 
 ```ruby
-pod 'LinkedinSwift', '~> 1.6.6'
+pod 'LinkedinSwift', '~> 1.7.5'
 ```
 
 Check out Example project.
@@ -84,6 +84,10 @@ linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~?format=json",
         
     //Encounter error
 }
+```
+- Logout:
+```swift
+linkedinHelper.logout()
 ```
 
 Example project screenshots:
