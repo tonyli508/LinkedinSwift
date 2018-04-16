@@ -121,7 +121,6 @@
 }
 
 + (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    
     return [self isLinkedinAppInstalled] && [LISDKCallbackHandler application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 

@@ -41,14 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         // Linkedin sdk handle redirect
         if LinkedinSwiftHelper.shouldHandle(url) {
-            return LinkedinSwiftHelper.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+            return LinkedinSwiftHelper.application(app, open: url, sourceApplication: nil, annotation: nil)
         }
         
         return false
     }
-
 }
 

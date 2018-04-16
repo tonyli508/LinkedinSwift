@@ -62,6 +62,17 @@ func application(application: UIApplication,
     return false
 }
 ```
+:warning: for iOS 9 and above use this instead:
+```swift
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        // Linkedin sdk handle redirect
+        if LinkedinSwiftHelper.shouldHandle(url) {
+            return LinkedinSwiftHelper.application(app, open: url, sourceApplication: nil, annotation: nil)
+        }
+        
+        return false
+    }
+```
 - Login:
 ```swift
 linkedinHelper.authorizeSuccess({ (lsToken) -> Void in
