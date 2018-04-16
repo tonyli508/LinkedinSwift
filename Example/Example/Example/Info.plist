@@ -21,14 +21,27 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>URL Schemes</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>li4127213</string>
 			</array>
 		</dict>
 	</array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>linkedin.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
 	<key>CFBundleVersion</key>
 	<string>1.2</string>
 	<key>LIAppId</key>
