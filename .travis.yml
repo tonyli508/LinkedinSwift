@@ -5,4 +5,4 @@ xcode_scheme: LinkedinSwift
 xcode_sdk: iphonesimulator
 podfile: LinkedinSwift/Podfile
 script:
-    - xcodebuild clean test -sdk iphonesimulator -workspace LinkedinSwift/LinkedinSwift.xcworkspace -scheme LinkedinSwift CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean test -sdk iphonesimulator -workspace LinkedinSwift/LinkedinSwift.xcworkspace -scheme LinkedinSwift -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGNING_REQUIRED=NO
