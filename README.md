@@ -109,5 +109,6 @@ Example project screenshots:
 
 ## Known issues
 
-It seems Linkedin 1.0.7 messed up with `Bitcode support.` again. You need to turn off Bitcode to make it work.
+-It seems Linkedin 1.0.7 messed up with `Bitcode support.` again. You need to turn off Bitcode to make it work.-
+seems can turn on Bitcode now.
 
