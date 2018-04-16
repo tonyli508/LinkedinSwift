@@ -87,6 +87,7 @@
 }
 
 - (void)logout {
+    lsAccessToken = nil;
     /// logout all sessions
     [nativeClient logout];
     [webClient logout];
