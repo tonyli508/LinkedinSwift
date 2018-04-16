@@ -1,1 +1,1 @@
-../../../LinkedinSwift/LinkedinSwift/LinkedinSwift/sources/LSLinkedinToken.h
+../../../LinkedinSwift/LinkedinSwift/LinkedinSwift/sources/Entities/LSLinkedinToken.h

@@ -1,1 +1,1 @@
-../../../LinkedinSwift/LinkedinSwift/LinkedinSwift/sources/LSResponse.h
+../../../LinkedinSwift/LinkedinSwift/LinkedinSwift/sources/Entities/LSResponse.h

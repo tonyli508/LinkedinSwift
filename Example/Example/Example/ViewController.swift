@@ -57,6 +57,15 @@ class ViewController: UIViewController {
         })
     }
     
+    @IBAction func logout() {
+        
+        /**
+         logout current linkedin user
+         */
+        
+        linkedinHelper.logout()
+    }
+    
     /**
      Request profile for your just logged in account
      */
