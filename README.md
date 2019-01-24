@@ -30,7 +30,7 @@ Try the example app as well.
 ## How to use
 
 ```ruby
-pod 'LinkedinSwift', '~> 1.7.7'
+pod 'LinkedinSwift', '~> 1.7.9'
 ```
 
 Check out Example project.
