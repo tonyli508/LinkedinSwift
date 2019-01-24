@@ -34,6 +34,16 @@
  */
 - (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)configuration;
 
+
+/**
+ Init with Configuration and NativeAppInstalledChecker, you can use this to force using web login only by passing in WebLoginOnly
+
+ @param _configuration  LinkedinSwiftConfiguration
+ @param _checker        NativeAppInstalledChecker for check if has linkedin native app installed
+ @return LinkedinSwiftHelper
+ */
+- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nonnull)_checker;
+
 /**
  *  Init with configuration and web oauth present view controller which oauth-based webview will present in
  *

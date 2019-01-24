@@ -32,6 +32,10 @@
     return [self initWithConfiguration:_configuration nativeAppChecker:nil clients:nil webOAuthPresentViewController:nil persistedLSToken:nil];
 }
 
+- (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nonnull)_checker {
+    return [self initWithConfiguration:_configuration nativeAppChecker:_checker clients:nil webOAuthPresentViewController:nil persistedLSToken:nil];
+}
+
 - (_Nonnull instancetype)initWithConfiguration:(LinkedinSwiftConfiguration* _Nonnull)_configuration nativeAppChecker:(NativeAppInstalledChecker* _Nullable)_checker clients:(NSArray <id<LinkedinClient>>* _Nullable)clients webOAuthPresentViewController:(UIViewController* _Nullable)presentViewController persistedLSToken:(LSLinkedinToken* _Nullable)lsToken {
     
     if (self = [super init]) {

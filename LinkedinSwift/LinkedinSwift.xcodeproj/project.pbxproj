@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0035D623217B3DC7320F45C9 /* libPods-LinkedinSwift.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E66CB55BA9170DA7148F2E /* libPods-LinkedinSwift.a */; };
+		1048AF8E21FA05930090A1CE /* WebLoginOnly.h in Headers */ = {isa = PBXBuildFile; fileRef = 1048AF8C21FA05930090A1CE /* WebLoginOnly.h */; };
+		1048AF8F21FA05930090A1CE /* WebLoginOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 1048AF8D21FA05930090A1CE /* WebLoginOnly.m */; };
 		10682E141D744C44006D3715 /* LSLinkedinToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 10682E101D744C44006D3715 /* LSLinkedinToken.h */; };
 		10682E151D744C44006D3715 /* LSLinkedinToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 10682E111D744C44006D3715 /* LSLinkedinToken.m */; };
 		10682E161D744C44006D3715 /* LSResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 10682E121D744C44006D3715 /* LSResponse.h */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1048AF8C21FA05930090A1CE /* WebLoginOnly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WebLoginOnly.h; path = sources/WebLoginOnly.h; sourceTree = "<group>"; };
+		1048AF8D21FA05930090A1CE /* WebLoginOnly.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WebLoginOnly.m; path = sources/WebLoginOnly.m; sourceTree = "<group>"; };
 		10682E101D744C44006D3715 /* LSLinkedinToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSLinkedinToken.h; path = sources/Entities/LSLinkedinToken.h; sourceTree = "<group>"; };
 		10682E111D744C44006D3715 /* LSLinkedinToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSLinkedinToken.m; path = sources/Entities/LSLinkedinToken.m; sourceTree = "<group>"; };
 		10682E121D744C44006D3715 /* LSResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSResponse.h; path = sources/Entities/LSResponse.h; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 				10B3421D1D7490DE00B1F88F /* LinkedinNativeClient.m */,
 				10B342201D7490F700B1F88F /* LinkedinOAuthWebClient.h */,
 				10B342211D7490F700B1F88F /* LinkedinOAuthWebClient.m */,
+				1048AF8C21FA05930090A1CE /* WebLoginOnly.h */,
+				1048AF8D21FA05930090A1CE /* WebLoginOnly.m */,
 			);
 			name = sources;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 				10682E1A1D744C79006D3715 /* LinkedinSwiftConfiguration.h in Headers */,
 				10905AA31BFE95B5002AA119 /* LSHeader.h in Headers */,
 				10B3421E1D7490DE00B1F88F /* LinkedinNativeClient.h in Headers */,
+				1048AF8E21FA05930090A1CE /* WebLoginOnly.h in Headers */,
 				10F97B4B1BFBA66D00C420E4 /* LinkedinSwiftHelper.h in Headers */,
 				10682E161D744C44006D3715 /* LSResponse.h in Headers */,
 				10F97B261BFBA10500C420E4 /* LinkedinSwift.h in Headers */,
@@ -414,6 +421,7 @@
 			files = (
 				10B342231D7490F700B1F88F /* LinkedinOAuthWebClient.m in Sources */,
 				10682E171D744C44006D3715 /* LSResponse.m in Sources */,
+				1048AF8F21FA05930090A1CE /* WebLoginOnly.m in Sources */,
 				10F97B4C1BFBA66D00C420E4 /* LinkedinSwiftHelper.m in Sources */,
 				10682E1B1D744C79006D3715 /* LinkedinSwiftConfiguration.m in Sources */,
 				10B3421F1D7490DE00B1F88F /* LinkedinNativeClient.m in Sources */,
