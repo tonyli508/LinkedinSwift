@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BC19A401FE5E07BF5B911158F47106C"
+               BlueprintIdentifier = "8554722A05FDF3E05CA4E10CBDD03EE8"
                BlueprintName = "IOSLinkedInAPIFix"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libIOSLinkedInAPIFix.a">

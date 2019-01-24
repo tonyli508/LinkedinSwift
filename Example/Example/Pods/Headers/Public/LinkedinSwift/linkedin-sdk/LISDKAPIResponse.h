@@ -1,1 +1,0 @@
-../../../../LinkedinSwift/linkedin-sdk.framework/Headers/LISDKAPIResponse.h

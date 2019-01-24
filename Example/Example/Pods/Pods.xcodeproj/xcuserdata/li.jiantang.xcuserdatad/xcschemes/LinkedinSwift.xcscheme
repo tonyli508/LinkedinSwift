@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A0E159A6B96F7C8D02E355603A61DCFE"
+               BlueprintIdentifier = "14BCA7D495A3E2D6E43B3AB41763E7AD"
                BlueprintName = "LinkedinSwift"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libLinkedinSwift.a">

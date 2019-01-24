@@ -27,6 +27,8 @@ let linkedinHelper = LinkedinSwiftHelper(configuration:
 ```
 Try the example app as well.
 
+Be aware of their upcoming changes for permissions as well, starting from 1st March, 2019, they may only supprot r_liteprofile permission instead of r_basicprofile. [link](https://docs.microsoft.com/en-us/linkedin/consumer/integrations/self-serve/sign-in-with-linkedin?context=linkedin/consumer/context)
+
 ## How to use
 
 ```ruby
