@@ -11,5 +11,6 @@
 
 #import "LinkedinSwiftHelper.h"
 #import "LinkedinSwiftConfiguration.h"
+#import "WebLoginOnly.h"
 
 #endif /* LSHeader_h */
