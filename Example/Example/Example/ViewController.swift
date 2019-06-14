@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnProfile: UIButton!
     
     // You still need to set appId and URLScheme in Info.plist, follow this instruction: https://developer.linkedin.com/docs/ios-sdk
-    let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF46ikMMZADfdfds", permissions: ["r_basicprofile", "r_emailaddress"], redirectUrl: "https://github.com/tonyli508/LinkedinSwift"), nativeAppChecker: WebLoginOnly())
+    let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "77tn2ar7gq6lgv", clientSecret: "iqkDGYpWdhf7WKzA", state: "DLKDJF46ikMMZADfdfds", permissions: ["r_liteprofile", "r_emailaddress"], redirectUrl: "https://github.com/tonyli508/LinkedinSwift"), nativeAppChecker: WebLoginOnly())
     
     
     override func viewDidLoad() {
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
      */
     @IBAction func requestProfile() {
         
-        linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~:(id,first-name,last-name,email-address,picture-url,picture-urls::(original),positions,date-of-birth,phone-numbers,location)?format=json", requestType: LinkedinSwiftRequestGet, success: { (response) -> Void in
+        linkedinHelper.requestURL("https://api.linkedin.com/v2/me", requestType: LinkedinSwiftRequestGet, success: { (response) -> Void in
             
             self.writeConsoleLine("Request success with response: \(response)")
             
