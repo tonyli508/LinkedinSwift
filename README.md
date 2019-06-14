@@ -44,7 +44,7 @@ let linkedinHelper = LinkedinSwiftHelper(configuration:
         clientId: "77tn2ar7gq6lgv", 
         clientSecret: "iqkDGYpWdhf7WKzA", 
         state: "DLKDJF45DIWOERCM", 
-        permissions: ["r_basicprofile", "r_emailaddress"]
+        permissions: ["r_liteprofile", "r_emailaddress"]
     )
 )
 ```
