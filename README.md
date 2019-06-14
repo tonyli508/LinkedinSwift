@@ -20,7 +20,7 @@ let linkedinHelper = LinkedinSwiftHelper(configuration:
         clientId: "77tn2ar7gq6lgv", 
         clientSecret: "iqkDGYpWdhf7WKzA", 
         state: "DLKDJF45DIWOERCM", 
-        permissions: ["r_basicprofile", "r_emailaddress"]
+        permissions: ["r_liteprofile", "r_emailaddress"]
     ),
     nativeAppChecker: WebLoginOnly()
 )
@@ -102,7 +102,7 @@ linkedinHelper.authorizeSuccess({ (lsToken) -> Void in
 ```
 - Fetch profile:
 ```swift
-linkedinHelper.requestURL("https://api.linkedin.com/v1/people/~?format=json", 
+linkedinHelper.requestURL("https://api.linkedin.com/v2/me", 
     requestType: LinkedinSwiftRequestGet, 
     success: { (response) -> Void in
     
