@@ -8,8 +8,8 @@
 
 #import "LinkedinOAuthWebClient.h"
 
-#import <IOSLinkedInAPIFix/LIALinkedInApplication.h>
-#import <IOSLinkedInAPIFix/LIALinkedInHttpClient.h>
+#import <IOSLinkedInAPIFix1/LIALinkedInApplication.h>
+#import <IOSLinkedInAPIFix1/LIALinkedInHttpClient.h>
 
 @implementation LinkedinOAuthWebClient
 
@@ -56,7 +56,7 @@
 - (void)requestURL:(NSString* _Nonnull)url requestType:(LinkedinSwiftRequestType* _Nonnull)requestType token:(LSLinkedinToken * _Nonnull)token success:(__nullable LinkedinSwiftRequestSuccessCallback)successCallback error:(__nullable LinkedinSwiftRequestErrorCallback)errorCallback {
     
 #ifdef isSessionManager
-    [httpClient GET:url parameters:@{@"oauth2_access_token": token.accessToken} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [httpClient GET:url parameters:@{@"oauth2_access_token": token.accessToken} headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successCallback([[LSResponse alloc] initWithDictionary:responseObject statusCode:200]);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         errorCallback(error);

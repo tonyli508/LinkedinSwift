@@ -1,15 +1,15 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
+ platform :ios, '9.0'
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
 target 'LinkedinSwift' do
-    pod 'AFNetworking', '>=3.2.0'
-    pod 'IOSLinkedInAPIFix', '>= 2.0.4'
+    pod 'AFNetworking', '>=3.5.0'
+    pod 'IOSLinkedInAPIFix1', '>= 2.0.6'
 end
 
 target 'LinkedinSwiftTests' do
-    pod 'AFNetworking', '>=3.2.0'
-    pod 'IOSLinkedInAPIFix', '>= 2.0.4'
+    pod 'AFNetworking', '>=3.5.0'
+    pod 'IOSLinkedInAPIFix1', '>= 2.0.6'
 end
 
