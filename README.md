@@ -120,8 +120,8 @@ linkedinHelper.logout()
 
 Example project screenshots:
 
-<p align="center">
-<img src="https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg" alt="Demo photo" width="56" height="100" />
+<p align="left">
+<img src="https://github.com/tonyli508/LinkedinSwift/blob/master/page_images/screenshot1.jpg" alt="Demo photo" width="280" height="500" />
 </p>
 
 ## Known issues
