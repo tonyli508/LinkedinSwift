@@ -32,7 +32,7 @@ Be aware of their upcoming changes for permissions as well, starting from 1st Ma
 ## How to use
 
 ```ruby
-pod 'LinkedinSwift', '~> 1.8.0'
+pod 'LinkedinSwift', '~> 1.8.1'
 ```
 
 Check out Example project.
