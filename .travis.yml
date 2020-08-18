@@ -1,8 +1,8 @@
 language: objective-c
-osx_image: xcode9.3
+osx_image: xcode11.6
 xcode_workspace: LinkedinSwift/LinkedinSwift.xcworkspace/
 xcode_scheme: LinkedinSwift
 xcode_sdk: iphonesimulator
 podfile: LinkedinSwift/Podfile
 script:
-    - xcodebuild clean test -sdk iphonesimulator -workspace LinkedinSwift/LinkedinSwift.xcworkspace -scheme LinkedinSwift -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean test -sdk iphonesimulator -workspace LinkedinSwift/LinkedinSwift.xcworkspace -scheme LinkedinSwift -destination 'platform=iOS Simulator,name=iPhone 11' CODE_SIGNING_REQUIRED=NO
